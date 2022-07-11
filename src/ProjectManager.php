@@ -52,4 +52,10 @@ class ProjectManager extends Impiegato
         
     }
 
+    public function assegnaTask($task, $developer): void{
+        
+        $developer->addTask($task);
+        
+    }
+
 }

@@ -62,7 +62,10 @@ Se un CEO Esiste già il sistema risponderà che esiste già un CEO, altrimenti 
    Se project manager e progetto esistono crea il task e lo assegna al progetto, altrimenti da errore
 
    Assegna Task
-   
+
+   Lanciare assegna_task es. -> php assegna_task.php 2 1 2
+   Se project manager, task e developer esistono crea l'associazione, altrimenti restituisce errore
+
 
 
 
