@@ -18,37 +18,42 @@
 
 
 
-#   L'applicazione permette che esista un solo CEO
-#   Poiché CEO e impiegati normali non hanno nulla in comune ho creato una classe Impiegato da cui ereditano le classi ProjectManager e Developer.
-#   CEO è una classe a parte 
+   L'applicazione permette che esista un solo CEO
+   Poiché CEO e impiegati normali non hanno nulla in comune ho creato una classe Impiegato da cui ereditano le classi ProjectManager e Developer.
+   CEO è una classe a parte 
 
 
 ISTRUZIONI UTILIZZO FUNZIONI CLI
 
-#   Inizializzazione
+Inizializzazione
 
-#   Lanciare inizializza.php es. -> php inizializza.php Albano Salvatore LBNSVT85M14I639P
-#   Se un CEO Esiste già il sistema risponderà che esiste già un CEO, altrimenti lo inserirà
+Lanciare inizializza.php es. -> php inizializza.php Albano Salvatore LBNSVT85M14I639P
+Se un CEO Esiste già il sistema risponderà che esiste già un CEO, altrimenti lo inserirà
 
-#   Assumi Project Manager
+   Assumi Project Manager
 
-#   Lanciare assumi_project_manager.php es. -> php assumi_project_manager.php Albano Salvatore LBNSVT85M14I639Z
-#   Se esiste già (controlla CF) lo comunica, altrimenti lo inserisce
+   Lanciare assumi_project_manager.php es. -> php assumi_project_manager.php Albano Salvatore LBNSVT85M14I639Z
+   Se esiste già (controlla CF) lo comunica, altrimenti lo inserisce
 
-#   Assumi Developer
+   Assumi Developer
 
-#   Lanciare assumi_developer.php es. -> php assumi_developer.php Albano Salvatore LBNSVT85M14I639T
-#   Se esiste già (controlla CF) lo comunica, altrimenti lo inserisce
+   Lanciare assumi_developer.php es. -> php assumi_developer.php Albano Salvatore LBNSVT85M14I639T
+   Se esiste già (controlla CF) lo comunica, altrimenti lo inserisce
 
-#   Crea Team
+   Crea Team
 
-#   Lanciare crea_team es. -> php crea_team.php Team1
-#   Se esiste già (controlla il nome) lo comunica, altrimenti lo inserisce
+   Lanciare crea_team es. -> php crea_team.php Team1
+   Se esiste già (controlla il nome) lo comunica, altrimenti lo inserisce
 
-#   Crea Progetto
+   Crea Progetto
 
-#   Lanciare crea_progetto es. -> php crea_progetto.php PrimoProgetto
-#   Se esiste già (controlla la descrizione) lo comunica, altrimenti lo inserisce
+   Lanciare crea_progetto es. -> php crea_progetto.php PrimoProgetto
+   Se esiste già (controlla la descrizione) lo comunica, altrimenti lo inserisce
+
+   Assegna Progetto
+
+   Lanciare assegna_progetto es. -> php assegna_progetto.php 1 1
+   Il Primo id passato si riferisce al progetto, il secondo al project manager. Se entrambi esistono lo assegna
 
 
 
