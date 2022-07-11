@@ -17,18 +17,26 @@ if(sizeof($ceo_vectors)>0){
     $devCognome = $argv[1];
     $devNome = $argv[2];
     $devCodiceFiscale = $argv[3];
+    $teamId = $argv[4];
 
     $records_dev = $entityManager->getRepository('src\Developer')->findBy(array('codice_fiscale' => $devCodiceFiscale));
     if(sizeof($records_dev)>0){
         echo "Il Developer che si sta tentando di inserire esiste già.";
     }
     else{
-        $ceo=$ceo_vectors[0];
-        $developer=$ceo->assumiDeveloper($devCognome,$devNome,$devCodiceFiscale);
-        $entityManager->persist($developer);
-        $entityManager->flush();
-    
-        echo "Creato Developer con ID " . $developer->getId() . "\n";
+        $records_team = $entityManager->getRepository('src\Team')->findBy(array('id' => $teamId));
+        if(sizeof($records_team)==0){
+            echo "Il Team scelto non esiste.";
+        }
+        else{
+            $ceo=$ceo_vectors[0];
+            $team=$records_team[0];
+            $developer=$ceo->assumiDeveloper($devCognome,$devNome,$devCodiceFiscale,$team);
+            $entityManager->persist($developer);
+            $entityManager->flush();
+        
+            echo "Creato Developer con ID " . $developer->getId() . "\n";
+        }
 
     }
 

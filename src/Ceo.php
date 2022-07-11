@@ -73,21 +73,24 @@ class Ceo
         $this->codice_fiscale = $codice_fiscale;
     }
 
-    public function assumiProjectManager($cognome,$nome,$codice_fiscale): ProjectManager{
+    public function assumiProjectManager($cognome,$nome,$codice_fiscale,$team): ProjectManager{
         $project_manager = new ProjectManager();
         $project_manager->setCognome($cognome);
         $project_manager->setNome($nome);
         $project_manager->setCodiceFiscale($codice_fiscale);
+        $project_manager->setTeam($team);
         
         return $project_manager;
         
     }
 
-    public function assumiDeveloper($cognome,$nome,$codice_fiscale): Developer{
+    public function assumiDeveloper($cognome,$nome,$codice_fiscale,$team): Developer{
         $developer = new Developer();
         $developer->setCognome($cognome);
         $developer->setNome($nome);
         $developer->setCodiceFiscale($codice_fiscale);
+        $developer->setTeam($team);
+
         
         return $developer;
         

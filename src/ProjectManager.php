@@ -4,6 +4,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 require_once 'Impiegato.php';
 require_once 'Progetto.php';
+require_once 'Task.php';
 
 
 /**
@@ -40,6 +41,15 @@ class ProjectManager extends Impiegato
     public function getProgetti()
     {
         return $this->progetti;
+    }
+
+    public function creaTask($descrizione, $status, $deadline, $progetto): Task{
+        $task = new Task($descrizione, $status, $deadline, $progetto);
+        
+        
+        
+        return $task;
+        
     }
 
 }

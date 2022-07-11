@@ -30,21 +30,22 @@ Inizializzazione
 Lanciare inizializza.php es. -> php inizializza.php Albano Salvatore LBNSVT85M14I639P
 Se un CEO Esiste già il sistema risponderà che esiste già un CEO, altrimenti lo inserirà
 
-   Assumi Project Manager
-
-   Lanciare assumi_project_manager.php es. -> php assumi_project_manager.php Albano Salvatore LBNSVT85M14I639Z
-   Se esiste già (controlla CF) lo comunica, altrimenti lo inserisce
-
-   Assumi Developer
-
-   Lanciare assumi_developer.php es. -> php assumi_developer.php Albano Salvatore LBNSVT85M14I639T
-   Se esiste già (controlla CF) lo comunica, altrimenti lo inserisce
-
    Crea Team
 
    Lanciare crea_team es. -> php crea_team.php Team1
    Se esiste già (controlla il nome) lo comunica, altrimenti lo inserisce
+   
+   Assumi Project Manager
 
+   Lanciare assumi_project_manager.php es. -> php assumi_project_manager.php Albano Salvatore LBNSVT85M14I639Z 1
+   Se esiste già (controlla CF) lo comunica, altrimenti lo inserisce
+
+   Assumi Developer
+
+   Lanciare assumi_developer.php es. -> php assumi_developer.php Albano Salvatore LBNSVT85M14I639T 1
+   Se esiste già (controlla CF) lo comunica, altrimenti lo inserisce
+
+ 
    Crea Progetto
 
    Lanciare crea_progetto es. -> php crea_progetto.php PrimoProgetto
@@ -54,6 +55,14 @@ Se un CEO Esiste già il sistema risponderà che esiste già un CEO, altrimenti 
 
    Lanciare assegna_progetto es. -> php assegna_progetto.php 1 1
    Il Primo id passato si riferisce al progetto, il secondo al project manager. Se entrambi esistono lo assegna
+
+   Crea Task
+
+   Lanciare crea_task es. -> php crea_task.php 2 1 TaskDiProva Inizializzato "2022-07-11"
+   Se project manager e progetto esistono crea il task e lo assegna al progetto, altrimenti da errore
+
+   Assegna Task
+   
 
 
 

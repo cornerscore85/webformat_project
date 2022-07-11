@@ -27,12 +27,19 @@ class Impiegato
     private $codice_fiscale;
 
     
+    /**
+     * Un impiegato fa parte di un team.
+     * @ORM\OneToOne(targetEntity="Team")
+     * @ORM\JoinColumn(name="team_id", referencedColumnName="id")
+     */
+    private $team;
 
-    public function __construct($cognome,$nome,$codice_fiscale)
+    public function __construct($cognome,$nome,$codice_fiscale,$team)
     {
         $this->cognome = $cognome;
         $this->nome = $nome;
         $this->codice_fiscale = $codice_fiscale;
+        $this->team = $team;
         
     }
     
@@ -69,6 +76,16 @@ class Impiegato
     public function setCodiceFiscale(string $codice_fiscale): void
     {
         $this->codice_fiscale = $codice_fiscale;
+    }
+
+    public function getTeam(): Team
+    {
+        return $this->team;
+    }
+
+    public function setTeam(Team $team): void
+    {
+        $this->team = $team;
     }
 
     
